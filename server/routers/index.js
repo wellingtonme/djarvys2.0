@@ -1,5 +1,5 @@
-import Auth from './auth.js'
+import Auth from './auth.js';
 
 module.exports = {
 	auth: Auth.routes()
-}
+};

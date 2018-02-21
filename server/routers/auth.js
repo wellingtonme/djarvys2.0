@@ -1,14 +1,15 @@
-import Router from 'koa-router'
+import Router from 'koa-router';
+
 const router = new Router({
 	prefix: '/auth'
-})
+});
 
-const getAuth = async (ctx) => {
+const getAuth = async ctx => {
 	ctx.body = {
 		auth: true
-	}
-}
+	};
+};
 
-router.get('/', getAuth)
+router.get('/', getAuth);
 
-export default router
+export default router;
