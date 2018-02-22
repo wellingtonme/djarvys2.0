@@ -1,7 +1,7 @@
 import Router from 'koa-router';
 
 const router = new Router({
-	prefix: '/auth'
+	prefix: '/api/v1/auth'
 });
 
 const getAuth = async ctx => {

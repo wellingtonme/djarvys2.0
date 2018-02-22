@@ -13,7 +13,7 @@ const config = {
 	debug: false
 };
 
-const testConfig = Object.assign({}, config, { connection: BASE_DB_URL + '/djarvys' });
+const testConfig = Object.assign({}, config, { connection: BASE_DB_URL + '/djarvys_test' });
 const devConfig = Object.assign({}, config, { connection: BASE_DB_URL + '/djarvys' });
 
 module.exports = {
