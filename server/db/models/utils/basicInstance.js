@@ -1,6 +1,7 @@
 const _basic = tableName => {
 	return {
-		tableName: tableName
+		tableName: tableName,
+		hasTimestamps: true
 	};
 };
 

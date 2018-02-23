@@ -30,13 +30,13 @@ describe(`Routes: auth`, () => {
 
 	describe(`POST ${PATH}/login `, () => {
 		it('should return json', () => {
+			const keysToHave = ['id', 'name', 'username', 'email', 'token', 'refresh'];
 			return request(app).post(`${PATH}/login`)
 				.send(userToLogin)
 				.expect(200)
 				.then(res => {
 					expect(res.body).toBeDefined();
-					expect(typeof res.body.auth).toBe('boolean');
-					expect(res.body.auth).toBe(true);
+					expect(Object.keys(res.body)).toEqual(expect.arrayContaining(keysToHave));
 				});
 		});
 	});
