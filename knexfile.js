@@ -1,6 +1,6 @@
 const path = require('path');
 const BASE_PATH = path.join(__dirname, 'server', 'db');
-const BASE_DB_URL = 'postgres://postgres:1234@localhost:5432';
+const BASE_DB_URL = 'postgres://postgres:1234@localhost:5433';
 
 const config = {
 	client: 'pg',

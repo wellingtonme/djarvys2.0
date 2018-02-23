@@ -39,7 +39,9 @@ const roleStatement = `insert into roles ( id, code ) values ( :id, :code )
 	returning *`;
 
 const usersRolesStatement = `insert into users_roles ( user_id, role_id ) 
-	values ( :userId, :roleId )
+	select :userId, :roleId 
+	where not exists 
+	(select user_id from users_roles where user_id = :userId and role_id = :roleId)
 	returning *`;
 
 const userRoleAdmin = {
